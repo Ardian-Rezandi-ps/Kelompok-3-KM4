@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 099dea985c51ffb4abb81903b53ac911
+  - enabled: 1
+    path: Assets/Scenes/Latihan Dialog.unity
+    guid: cb32461b0e67e5546b7b1bc616259348
   m_configObjects: {}
