@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - npc
+  - obstacle
+  - player
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tanah
+    uniqueID: 677974935
+    locked: 0
+  - name: Pohon
+    uniqueID: 3125012641
+    locked: 0
+  - name: Player
+    uniqueID: 2190355789
+    locked: 0
+  - name: Atas Player
+    uniqueID: 2848189455
     locked: 0
