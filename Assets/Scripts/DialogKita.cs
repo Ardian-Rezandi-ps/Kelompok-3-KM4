@@ -7,6 +7,8 @@ public class DialogKita : MonoBehaviour
     public static DialogKita instance;
     public DialogManager DialogManager;
     public GameObject objekPrinter;
+        public GameObject kuisGo;
+
     public GameObject[] Example;
 
     void Awake()
@@ -29,9 +31,9 @@ public class DialogKita : MonoBehaviour
          ));
              dialogTexts.Add(new DialogData("Ini /color:black/latihan Dialog","Sa"));
            
-             var TexQuest= new DialogData("Apa kabar?");
+             var TexQuest= new DialogData("Kamu mau quiz?");
             TexQuest.SelectList.Add("Syukurlah","Baik kak");
-            TexQuest.SelectList.Add("Semangat","Sedih kak");
+            TexQuest.SelectList.Add("Semangat","ok deh kak");
                 TexQuest.Callback = () =>CekKabar();
                 
             dialogTexts.Add(TexQuest);
@@ -62,6 +64,7 @@ public class DialogKita : MonoBehaviour
     void MunculkanJoystik(){
         print("masuk munculkan");
          GameManagerLatihan.instance.joystickGO.SetActive(true);
+         kuisGo.SetActive(true);
     }
     private void Show_Example(int index)
     {
