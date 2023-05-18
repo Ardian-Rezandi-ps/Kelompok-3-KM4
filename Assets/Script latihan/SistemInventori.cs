@@ -21,6 +21,7 @@ public class SistemInventori : MonoBehaviour
      }
      public void TambahItem(GameObject go){
         Instantiate(go,tempatHadiah);
+        
      }
     public void SelectAnItem(string nama, string deskripsi){
                 UnselectAllItem();
