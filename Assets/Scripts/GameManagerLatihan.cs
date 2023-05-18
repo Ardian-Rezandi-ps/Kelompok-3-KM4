@@ -6,6 +6,7 @@ public class GameManagerLatihan : MonoBehaviour
 {
     public static GameManagerLatihan instance;
     public GameObject joystickGO;
+    public GameObject[] hadiahInventori;
     void Awake()
     {
         instance=this;

@@ -57,6 +57,8 @@ public class QuizManager : MonoBehaviour
             if(skorBenar == maxJumlahSoal){
                 kuisSelesaiTx.text="Selamat Kuis Selesai dengan jawaban Benar semua!";
                 buttnRetry.SetActive(false);
+                //dapat hadiah/menang
+                SistemInventori.instance.TambahItem(GameManagerLatihan.instance.hadiahInventori[0]);
             }else{
                  kuisSelesaiTx.text="Maaf terdapat soal dengan jawaban yang salah, coba lagi?";
                  buttnRetry.SetActive(true);

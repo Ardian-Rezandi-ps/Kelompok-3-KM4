@@ -7,6 +7,8 @@ TagManager:
   - npc
   - obstacle
   - player
+  - sfx
+  - inventori
   layers:
   - Default
   - TransparentFX
