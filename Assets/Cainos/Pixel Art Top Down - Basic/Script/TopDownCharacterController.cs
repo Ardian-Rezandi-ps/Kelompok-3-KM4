@@ -8,7 +8,7 @@ namespace Cainos.PixelArtTopDown_Basic
     {
         public float speed;
          public VariableJoystick variableJoystick;
-        private Animator animator;
+        public Animator animator;
 
         public Collider2D colliderPlayer;
         private void Start()

@@ -45,6 +45,45 @@ public class DialogKita : MonoBehaviour
          // GameManagerLatihan.instance.joystickGO.SetActive(true);
         
     }   
+     public void BicarasamaNpcRoro()
+    {   
+
+        GameManagerLatihan.instance.joystickGO.SetActive(false);
+         var dialogTexts = new List<DialogData>();
+
+         dialogTexts.Add(new DialogData("/color:black/Tolong Aku!",""
+        // ,() => Show_Example(0)
+         ));
+             dialogTexts.Add(new DialogData("/color:black/Aku Kehilangan Kapak Peninggalan Ayahku",""));
+           
+             var TexQuest= new DialogData("/color:black/Maukah Kamu membantuku mencarikannya?");
+            TexQuest.SelectList.Add("bantu","Baik, Aku akan membantumu!");
+            TexQuest.SelectList.Add("tidak","Maaf aku sibuk.");
+                TexQuest.Callback = () =>CekBantuCariKapak();
+                
+            dialogTexts.Add(TexQuest);
+            dialogTexts.Add((new DialogData("/color:black/Terima kasih Sebelumnya","", () => MunculkanJoystikNoquiz())));
+           DialogManager.Show(dialogTexts);
+        //GameManagerLatihan.instance.joystickGO.SetActive(true);
+        
+    }   
+     void CekBantuCariKapak(){
+         
+        if(DialogManager.Result=="bantu"){
+             var dialogTexts = new List<DialogData>();
+             dialogTexts.Add(new DialogData("/color:black/Ah Terimakasih Pemuda","", () =>MunculkanJoystikNoquiz()));
+              DialogManager.Show(dialogTexts);
+            
+        }else  if(DialogManager.Result=="tidak"){
+             var dialogTexts = new List<DialogData>();
+             dialogTexts.Add(new DialogData("/color:black/Yah, Sayang sekali","", () => MunculkanJoystikNoquiz()));
+           //  dialogTexts.
+              DialogManager.Show(dialogTexts);
+          
+              
+        }
+
+    }
     void CekKabar(){
          
         if(DialogManager.Result=="Syukurlah"){
@@ -61,6 +100,10 @@ public class DialogKita : MonoBehaviour
               
         }
     }
+     void MunculkanJoystikNoquiz(){
+    
+         GameManagerLatihan.instance.joystickGO.SetActive(true);
+     }
     void MunculkanJoystik(){
         print("masuk munculkan");
          GameManagerLatihan.instance.joystickGO.SetActive(true);
